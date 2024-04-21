@@ -58,12 +58,7 @@ inputs.forEach((input, index1) => {
       inputs.forEach((e) => {
         val += e.value;
         if (val == "sher") {
-          document
-            .getElementById("unlocked")
-            .insertAdjacentHTML(
-              "afterbegin",
-              '<a href="poster.html">Open me</a>'
-            );
+          window.open("poster.html");
         }
       });
 
