@@ -87,5 +87,4 @@ function sha256(str) {
 }
 
 // Example usage
-const myString = "sher";
 sha256(myString).then((c) => console.log(c));
