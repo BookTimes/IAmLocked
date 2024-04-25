@@ -57,8 +57,15 @@ inputs.forEach((input, index1) => {
       var val = "";
       inputs.forEach((e) => {
         val += e.value;
-        if (val == "sher") {
-          window.open("poster.html");
+        if (val.length == 4) {
+          sha256(myString).then((c) => {
+            if (
+              c ==
+              "28c5f19f166ad68f350f656104280a744305edac23b5bcbd2d975f2d12721964"
+            ) {
+              window.open("poster.html");
+            }
+          });
         }
       });
 
@@ -66,3 +73,19 @@ inputs.forEach((input, index1) => {
     }
   });
 });
+
+function sha256(str) {
+  // Convert the string to a byte array
+  const buffer = new TextEncoder().encode(str);
+  // Hash the byte array using the SHA-256 algorithm
+  return crypto.subtle.digest("SHA-256", buffer).then((hash) => {
+    // Convert the hash to a hexadecimal string
+    return Array.prototype.map
+      .call(new Uint8Array(hash), (x) => ("00" + x.toString(16)).slice(-2))
+      .join("");
+  });
+}
+
+// Example usage
+const myString = "sher";
+sha256(myString).then((c) => console.log(c));
