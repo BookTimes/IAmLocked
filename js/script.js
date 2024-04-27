@@ -1,7 +1,6 @@
 const inputs = document.querySelectorAll(".otp-field > input");
-
 window.addEventListener("load", () => inputs[0].focus());
-
+var bkd = `<button id="053s-44" onclick='jfj(5)'>Open</button>`;
 inputs[0].addEventListener("paste", function (event) {
   event.preventDefault();
 
@@ -21,6 +20,7 @@ inputs[0].addEventListener("paste", function (event) {
     }
   }
 });
+const y = [0, 5, 45, 35, 3, 0.45, bkd, 56.4, 354.3, 5, 5, 4.4];
 
 inputs.forEach((input, index1) => {
   input.addEventListener("keyup", (e) => {
@@ -58,12 +58,12 @@ inputs.forEach((input, index1) => {
       inputs.forEach((e) => {
         val += e.value;
         if (val.length == 4) {
-          sha256(myString).then((c) => {
+          sha256(val).then((c) => {
             if (
               c ==
               "28c5f19f166ad68f350f656104280a744305edac23b5bcbd2d975f2d12721964"
             ) {
-              window.open("poster.html");
+              jfj(4);
             }
           });
         }
@@ -85,6 +85,24 @@ function sha256(str) {
       .join("");
   });
 }
+function jfj(k) {
+  switch (k) {
+    case "4":
+      b[5];
+      break;
+    case "5":
+      break;
+    case 4:
+      jfj(y[4]);
+      break;
+    case y[1]:
+      window.open(bdk);
+    default:
+      hfj();
+  }
+}
 
-// Example usage
-sha256(myString).then((c) => console.log(c));
+const hfj = function () {
+  document.querySelector(".gwak").insertAdjacentHTML("beforeend", y[6]);
+  bdk = "poster.html";
+};
