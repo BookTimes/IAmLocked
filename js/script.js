@@ -1,9 +1,10 @@
 const inputs = document.querySelectorAll(".otp-field > input");
 window.addEventListener("load", () => inputs[0].focus());
-var bkd = `<button id="053s-44" onclick='jfj(5)'>Open</button>`;
+var bkd = `<button id="053s" onclick='jfj(5) '>Open</button>`;
+const h = ["l", "o", "v", "e"];
+
 inputs[0].addEventListener("paste", function (event) {
   event.preventDefault();
-
   const pastedValue = (event.clipboardData || window.clipboardData).getData(
     "text"
   );
@@ -64,6 +65,9 @@ inputs.forEach((input, index1) => {
               "28c5f19f166ad68f350f656104280a744305edac23b5bcbd2d975f2d12721964"
             ) {
               jfj(4);
+              inputs.forEach((d, j) => {
+                d.value = h[j];
+              });
             }
           });
         }
@@ -96,13 +100,16 @@ function jfj(k) {
       jfj(y[4]);
       break;
     case y[1]:
+      document.getElementById("053s").onclick = "";
+      hfj = "";
       window.open(bdk);
     default:
       hfj();
   }
 }
 
-const hfj = function () {
+var hfj = function () {
   document.querySelector(".gwak").insertAdjacentHTML("beforeend", y[6]);
+  y.push("053s");
   bdk = "poster.html";
 };
