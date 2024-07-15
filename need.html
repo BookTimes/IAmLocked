@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>I need u</title>
+  </head>
+  <body>
+    <div class="need">
+      <img class="need-img" src="" alt="" />
+      <button onclick="updateimage()" class="need-btn">Click</button>
+    </div>
+  </body>
+</html>
+<style>
+  body {
+    background: #000000;
+  }
+  .need {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .need-img {
+    width: 80%;
+    border-radius: 20px;
+  }
+  .need-btn {
+    padding: 10px;
+    background: #ffffff;
+    color: black;
+    border-radius: 20px;
+    border: none;
+  }
+</style>
+<script>
+  let j = 1;
+  const needim = document.querySelector(".need-img");
+
+  function updateimage() {
+    if (j <= 4) {
+      needim.src = `need/${j}.png`;
+    }
+    j += 1;
+  }
+  document.addEventListener("DOMContentLoaded", updateimage());
+</script>

@@ -1,7 +1,7 @@
 const inputs = document.querySelectorAll(".otp-field > input");
 window.addEventListener("load", () => inputs[0].focus());
 var bkd = `<button id="053s" onclick='jfj(5) '>Open</button>`;
-const h = ["l", "o", "v", "e"];
+const h = ["h", "e", "h", "e"];
 
 inputs[0].addEventListener("paste", function (event) {
   event.preventDefault();
@@ -111,5 +111,5 @@ function jfj(k) {
 var hfj = function () {
   document.querySelector(".gwak").insertAdjacentHTML("beforeend", y[6]);
   y.push("053s");
-  bdk = "poster.html";
+  bdk = "need.html";
 };
