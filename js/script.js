@@ -59,17 +59,26 @@ inputs.forEach((input, index1) => {
       inputs.forEach((e) => {
         val += e.value;
         if (val.length == 4) {
-          sha256(val).then((c) => {
-            if (
-              c ==
-              "28c5f19f166ad68f350f656104280a744305edac23b5bcbd2d975f2d12721964"
-            ) {
-              jfj(4);
-              inputs.forEach((d, j) => {
-                d.value = h[j];
-              });
-            }
-          });
+          // sha256(val).then((c) => {
+          //   if (
+          //     c ==
+          //     "28c5f19f166ad68f350f656104280a744305edac23b5bcbd2d975f2d12721964"
+          //   ) {
+          //     // jfj(4);
+          //     setTimeout(() => {
+          //       window.location.href = "need.html";
+          //     }, 5000);
+          //     inputs.forEach((d, j) => {
+          //       d.value = h[j];
+          //     });
+          //   }
+          // });
+          if ((val = "SHER")) {
+            window.open("need.html");
+            inputs.forEach((d, j) => {
+              d.value = h[j];
+            });
+          }
         }
       });
 
@@ -81,14 +90,22 @@ inputs.forEach((input, index1) => {
 function sha256(str) {
   // Convert the string to a byte array
   const buffer = new TextEncoder().encode(str);
+
   // Hash the byte array using the SHA-256 algorithm
-  return crypto.subtle.digest("SHA-256", buffer).then((hash) => {
-    // Convert the hash to a hexadecimal string
-    return Array.prototype.map
-      .call(new Uint8Array(hash), (x) => ("00" + x.toString(16)).slice(-2))
-      .join("");
-  });
+  return crypto.subtle
+    .digest("SHA-256", buffer)
+    .then((hash) => {
+      // Convert the hash to a hexadecimal string
+      return Array.prototype.map
+        .call(new Uint8Array(hash), (x) => ("00" + x.toString(16)).slice(-2))
+        .join(""); // Join the array of hex values into a string
+    })
+    .catch((error) => {
+      console.error("Error generating SHA-256 hash:", error);
+      return null; // Return null in case of error
+    });
 }
+
 function jfj(k) {
   switch (k) {
     case "4":

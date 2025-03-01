@@ -8,7 +8,7 @@
   <body>
     <div class="need">
       <img class="need-img" src="" alt="" />
-      <button onclick="updateimage()" class="need-btn">Click</button>
+      <button onclick="updateimage()" class="need-btn">Next</button>
     </div>
   </body>
 </html>
@@ -25,10 +25,11 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 10px;
+    gap: 50px;
+    width: 90%;
   }
   .need-img {
-    width: 80%;
+    width: 90%;
     border-radius: 20px;
   }
   .need-btn {
@@ -44,8 +45,10 @@
   const needim = document.querySelector(".need-img");
 
   function updateimage() {
-    if (j <= 4) {
+    if (j <= 3) {
       needim.src = `need/${j}.png`;
+    } else {
+      alert("LYYY");
     }
     j += 1;
   }
