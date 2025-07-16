@@ -59,26 +59,29 @@ inputs.forEach((input, index1) => {
       inputs.forEach((e) => {
         val += e.value;
         if (val.length == 4) {
-          // sha256(val).then((c) => {
-          //   if (
-          //     c ==
-          //     "28c5f19f166ad68f350f656104280a744305edac23b5bcbd2d975f2d12721964"
-          //   ) {
-          //     // jfj(4);
-          //     setTimeout(() => {
-          //       window.location.href = "need.html";
-          //     }, 5000);
-          //     inputs.forEach((d, j) => {
-          //       d.value = h[j];
-          //     });
-          //   }
-          // });
-          if ((val = "SHER")) {
-            window.open("need.html");
+          console.log(val == "SHER");
+
+          // const encode = sha256(val);
+          if (
+            val == "SHER"
+            // "28c5f19f166ad68f350f656104280a744305edac23b5bcbd2d975f2d12721964"
+          ) {
+            // jfj(4);
+
+            setTimeout(() => {
+              window.location.href = "bllom.html";
+            }, 1000);
             inputs.forEach((d, j) => {
               d.value = h[j];
             });
           }
+
+          // if (val == "SHER") {
+          //   window.open("need.html");
+          //   inputs.forEach((d, j) => {
+          //     d.value = h[j];
+          //   });
+          // }
         }
       });
 

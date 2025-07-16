@@ -1,0 +1,37 @@
+body {
+  margin: 0;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Bungee", sans-serif;
+  height: 100dvh;
+}
+
+.title-text {
+  color: rgb(0, 0, 0);
+  font-size: 50px;
+  text-align: center;
+}
+
+.title-count {
+  font-size: 70px;
+}
+
+.cake-img {
+  width: 15rem;
+  border-radius: 15px;
+}
+
+.glass-card {
+  margin: 20px;
+  width: 30vw;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 13px;
+  background: transparent;
+  font-size: 20px;
+}

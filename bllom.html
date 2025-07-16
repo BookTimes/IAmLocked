@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/bdcake.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1,2,3 CAKE</title>
+  </head>
+  <body id="demo">
+    <div class="main">
+      <span class="title-text">Happy Birthday</span>
+      <span class="title-count title-text tot">1</span>
+      <img src="cake/cake1.png" alt="" class="cake-img tot" />
+      <button class="glass-card tot">→</button>
+    </div>
+  </body>
+</html>
+<script src="js/confetti.min.js"></script>
+<script>
+  // Pass in the id of an element
+  let confetti = new Confetti("demo");
+  // Edit given parameters
+  confetti.setCount(750);
+  confetti.setSize(1);
+  confetti.setPower(65);
+  confetti.setFade(false);
+  confetti.destroyTarget(false);
+  let cakeCount = 2;
+  const demo = document.getElementById("demo");
+  demo.addEventListener("click", function () {
+    if (cakeCount > 3) {
+      jk();
+      return;
+    }
+    document.querySelector(".title-count").innerText = cakeCount;
+    document.querySelector(".cake-img").src = `cake/cake${cakeCount}.png`;
+    cakeCount += 1;
+  });
+
+  const jk = function () {
+    document.querySelector(".title-text").innerText =
+      "Jk its one cake in 3 angles 😬";
+    document.querySelectorAll(".tot").forEach((element) => {
+      document.querySelector(".main").removeChild(element);
+    });
+  };
+</script>
