@@ -63,7 +63,8 @@ inputs.forEach((input, index1) => {
 
           // const encode = sha256(val);
           if (
-            val == "SHER"
+            val == "SHER" ||
+            val == "sher"
             // "28c5f19f166ad68f350f656104280a744305edac23b5bcbd2d975f2d12721964"
           ) {
             // jfj(4);
